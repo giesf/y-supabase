@@ -44,10 +44,10 @@
     "yjs": "^13.5.50"
   },
   "scripts": {
-    "build": "esbuild",
+    "build": "esbuild src/index.ts --format=cjs --bundle --sourcemap --minify --outfile=dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "postinstall": "esbuild"
+    "postinstall": "esbuild src/index.ts --format=cjs --bundle --sourcemap --minify --outfile=dist/index.js"
   }
 }
