@@ -26,7 +26,8 @@
     "@supabase/supabase-js": "^2.10.0",
     "debug": "^4.3.4",
     "events": "^3.3.0",
-    "y-protocols": "^1.0.5"
+    "y-protocols": "^1.0.5",
+    "esbuild": "^0.18.13"
   },
   "devDependencies": {
     "@types/debug": "^4.1.7",
@@ -43,10 +44,10 @@
     "yjs": "^13.5.50"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "esbuild",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "postinstall": "tsc"
+    "postinstall": "esbuild"
   }
 }
